@@ -1,0 +1,182 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+	border: 0;
+        
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	
+}
+
+header {
+	padding: 2rem 1.5rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-family: gabriola;
+	color: var(--grey);
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+input, button {
+	appearance: none;
+	outline: none;
+	background: none;
+}
+
+#form-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius:1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+#form-input::placeholder {
+	color: var(--grey);
+}
+
+#form-submit {
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, yellow, cyan);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#form-submit:hover {
+	opacity: 0.8;
+}
+
+#form-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.box h2 {
+    width: 1000px;
+	font-size: 2rem;
+	font-weight: 500;
+    padding: 0px 15px;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);   
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+/*--------*/
+#tasks {
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar
+{
+    width:5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: var(--darkest);
+}
+/*--------*/
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+    background-color: var(--darkest);
+}
+
+
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	background-image: linear-gradient(to right, magenta, cyan);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .remove {
+	color: crimson;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 0.5rem!important;
+}

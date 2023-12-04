@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="TO-DO.css" />
+</head>
+<body class="bg-dark text-light">
+
+    <header class="py-4">
+        <div class="container text-center">
+            <h1 class="display-4">TO-DO LIST</h1>
+            
+            <form id="form" class="d-flex">
+                <input type="text" name="form-input" id="form-input" class="form-control mr-2" placeholder="Write here...." />
+                <input type="submit" id="form-submit" class="btn btn-info" value="Add new task" />
+            </form>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="box">
+            <section class="task-list">
+                <h2>Tasks</h2>
+
+                <div id="tasks" class="overflow-auto">
+                      <!--      -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="TO-DO.js"></script>
+</body>
+</html>
